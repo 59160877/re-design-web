@@ -1,38 +1,583 @@
-.App {
+.bgimg {
+  background-image: url("./assets/bg7.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.display-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navbar {
+  font-family: Prompt;
+  font-weight: bold;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animated-title {
+  color: #21243d;
+  font-family: Roboto, Arial, sans-serif;
+  height: 90vmin;
+  left: 50%;
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.animated-title > div div {
+  font-size: 12vmin;
+  padding: 2vmin 0;
+  position: absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.animated-title > div div span {
+  display: block;
+}
+
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #88e1f2;
+  top: 0;
+}
+
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.animated-title > div.text-top div span:first-child {
+  color: #000839;
+}
+
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
+/* card */
+.card-body {
+  background-color: #000839;
+  color: aliceblue;
+}
+.jumbotron {
+  text-align: center;
+  font-family: Prompt;
+}
+.card-title {
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.card-body {
+  background-color: transparent;
+  color: #000839;
+  font-family: Prompt;
+}
+/* VISION */
+@charset "UTF-8";
+.text-center {
+  text-align: center;
+}
+
+.cf {
+  *zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+body .wrapper {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+body .wrapper h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-family: Prompt;
+}
+body .wrapper .speechbubble {
+  background-color: #162447;
+  color: #ffffff;
+  font-size: 1.3em;
+  line-height: 1.75;
+  padding: 15px 25px;
+  margin-bottom: 75px;
+  cursor: default;
+  font-family: Prompt;
+  text-align: center;
+}
+body .wrapper .speechbubble:nth-child(2n) {
+  border-left: 5px solid;
+}
+body .wrapper .speechbubble:nth-child(2n):after {
+  content: "";
+  margin-top: -30px;
+  padding-top: 0px;
+  position: relative;
+  bottom: -45px;
+  left: 20px;
+  border-width: 30px 0 0 30px;
+  border-style: solid;
+  border-color: #162447 transparent;
+  display: block;
+  width: 0;
+}
+body .wrapper .speechbubble:nth-child(2n + 1) {
+  border-right: 5px solid;
+}
+body .wrapper .speechbubble:nth-child(2n + 1):after {
+  content: "";
+  margin-top: -30px;
+  padding-top: 0px;
+  position: relative;
+  bottom: -45px;
+  left: 350px;
+  border-width: 30px 30px 0 0;
+  border-style: solid;
+  border-color: #162447 transparent;
+  display: block;
+  width: 0;
+}
+body .wrapper .speechbubble:nth-child(4n + 2) {
+  border-color: #5fdde5;
+}
+/* The process of creating software */
+.container,
+.container-lg,
+.container-md,
+.container-sm {
+  max-width: 960px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.card-title {
+  color: #bb3b0e;
+}
+/* Activity schedule 2019 */
+.row {
+  text-align: center;
+}
+h1 {
+  font-size: 2.5rem;
+  font-family: Prompt;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+/*footer  */
+.blockquote {
+  text-align: left;
+}
+/*  */
+
+/*
+=====
+DEPENDENCES
+=====
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Amaranth:700,400&display=swap");
+
+/* The component will reset browser's styles of link */
+
+.r-link {
+  --uirLinkDisplay: var(--rLinkDisplay, inline-block);
+  --uirLinkTextColor: var(--rLinkTextColor);
+  --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+
+  display: var(--uirLinkDisplay) !important;
+  color: var(--uirLinkTextColor) !important;
+  text-decoration: var(--uirLinkTextDecoration) !important;
+}
+
+/* The component will reset browser's styles of titles */
+
+.r-title {
+  --uirTitleMarginTop: var(--rTitleMarginTop, 0);
+  --uirTitleMarginBottom: var(--rTitleMarginBottom, 0);
+
+  margin-top: var(--uirTitleMarginTop) !important;
+  margin-bottom: var(--uirTitleMarginBottom) !important;
+}
+
+/*
+=====
+CORE STYLES
+=====
+*/
+
+.animated-underline {
+  --uiAnimatedUnderlineWidth: var(--animatedUnderlineWidth, 100%);
+  --uiAnimatedUnderlineHeight: var(--animatedUnderlineHeight, 2px);
+  --uiAnimatedUnderlineBgColor: var(--animatedUnderlineBgColor, currentColor);
+  --uiAnimatedUnderlinePositionX: var(--animatedUnderlinePositionX, 0);
+  --uiAnimatedUnderlinePositionY: var(--animatedUnderlinePositionY, bottom);
+
+  /*
+		1. For multi-line animated underline the "inline" value for the display property is compulsory.
+		2. Adds opportunity to create multi-line padding
+	*/
+
+  --rLinkDisplay: inline; /* 1 */
+
+  background-image: linear-gradient(
+    0,
+    var(--uiAnimatedUnderlineBgColor) 0,
+    var(--uiAnimatedUnderlineBgColor)
+  );
+  background-size: var(--uiAnimatedUnderlineWidth)
+    var(--uiAnimatedUnderlineHeight);
+  background-position: var(--uiAnimatedUnderlinePositionX)
+    var(--uiAnimatedUnderlinePositionY);
+  background-repeat: no-repeat;
+
+  -webkit-box-decoration-break: clone; /* 2 */
+  box-decoration-break: clone; /* 2 */
+
+  will-change: background-size;
+  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*
+=====
+SETTINGS
+=====
+*/
+
+:root {
+  --animatedUnderlineHeight: 1rem;
+  --animatedUnderlineBgColor: var(--accentColor);
+}
+
+.animated-underline_type1 {
+  --animatedUnderlineWidth: 100%;
+}
+
+.animated-underline_type1:hover {
+  --animatedUnderlineHeight: 100%;
+}
+
+.animated-underline_type2 {
+  --animatedUnderlineWidth: 100%;
+}
+
+.animated-underline_type2:hover {
+  --animatedUnderlineWidth: 0;
+}
+
+.animated-underline_type3 {
+  --animatedUnderlineHeight: 0;
+}
+
+.animated-underline_type3:hover {
+  --animatedUnderlineHeight: 100%;
+}
+
+.animated-underline_type4 {
+  --animatedUnderlineWidth: 0;
+}
+
+.animated-underline_type4:hover {
+  --animatedUnderlineWidth: 100%;
+}
+
+.animated-underline_type5 {
+  --animatedUnderlineWidth: 100%;
+  --animatedUnderlineHeight: 5px;
+  --animatedUnderlinePositionY: 90%;
+}
+
+.animated-underline_type5:hover {
+  --animatedUnderlineHeight: 1rem;
+}
+
+/*
+=====
+DEMO
+=====
+*/
+
+:root {
+  --mainColor: #084177;
+  --accentColor: #d2fafb;
+  --blackColor: #222;
+  --whiteColor: #fff;
+  --rLinkTextColor: var(--blackColor);
+}
+
+.page {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page__name-effect {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: 700;
+  font-size: 0.875rem;
 }
 
-.App-link {
-  color: #61dafb;
+.page__name-effect::before {
+  content: "";
+  width: 3.75rem;
+  height: 2px;
+  background-color: var(--mainColor);
+  margin-top: 0.25rem;
+  margin-right: 0.625rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.page__section:nth-child(n + 2) {
+  margin-top: 5rem;
+}
+
+.page__group {
+  margin-top: 2rem;
+}
+
+.news {
+  position: relative;
+
+  padding: 70px 6%;
+  border-top: 6px solid var(--mainColor);
+  border-radius: 4px;
+
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--whiteColor);
+}
+
+.news:nth-child(n + 2) {
+  margin-top: 3rem;
+}
+
+.news__date {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.news__title {
+  font-family: "Amaranth", sans-serif;
+  line-height: 1.25;
+}
+
+.news__link::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.news__content {
+  margin-top: 1.875rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.78;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 93.75%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  html {
+    font-size: 100%;
   }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+  html {
+    font-size: 106.25%;
+  }
+}
+
+@media (min-width: 961px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+@media (max-width: 960px) {
+  .page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .page__name-effect {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+
+  .news__title {
+    --rTitleMarginTop: 0.75rem;
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .page {
+    padding: 10px 10px;
+  }
+
+  .news__header {
+    display: flex;
+    align-items: flex-start;
+
+    padding-left: 1.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .news__date {
+    flex-shrink: 0;
+    font-family: "Amaranth", sans-serif;
+
+    margin-right: 40px;
+    text-align: center;
+  }
+
+  .news__day {
+    line-height: 1;
+    display: block;
+    font-size: 4.333rem;
+    color: var(--accentColorDark);
+  }
+
+  .news__year {
+    display: block;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .news__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1301px) {
+  .page__group {
+    padding-left: 190px;
+    padding-right: 100px;
+  }
+}
+/*  */
+
+.heading {
+  font-size: 4rem;
+  letter-spacing: 6px;
+  margin: 2rem 0;
+  text-align: center;
+}
+.heading--stroke {
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #0d1b1e;
+  -moz-text-stroke-color: #0d1b1e;
+  color: transparent;
+}
+.heading--shadow {
+  text-shadow: 0px 0px #2dc7ff;
+}
+.heading--stroke-shadow {
+  color: #f2cee6;
+  text-shadow: -2px 0 #0d1b1e, 0 -2px #0d1b1e, 2px 0 #0d1b1e, 0 2px #0d1b1e,
+    2px 2px #0d1b1e, -2px -2px #0d1b1e, -2px 2px #0d1b1e, 2px -2px #0d1b1e,
+    6px 6px #2dc7ff;
+}
+.heading--halftone {
+  position: relative;
+}
+.heading--halftone:after {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==")
+    repeat;
+  -webkit-text-stroke-width: 0;
+  -moz-text-stroke-width: 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 8rem;
+  letter-spacing: 6px;
+  left: calc(50% + 6px);
+  top: calc(50% + 6px);
+  content: "Hello";
+  z-index: -1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.heading--halftone-color:after {
+  background-color: #2dc7ff;
+}
+/* Footer */
+.news__content {
+  text-align: left;
+}
+/* link */
+.container-left {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.container-right {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
